@@ -47,19 +47,19 @@ void setup() {
 }
 
 void loop() {
-	// Switch OUT0 On
+	// Switch OUT0 on
 	OC01.write(OUT0, HIGH);
 	delay(DELAY_TIME);
 	
-	// Switch OUT1 On
+	// Switch OUT1 on
 	OC01.write(OUT1, HIGH);
 	delay(DELAY_TIME);
 	
-	// Switch OUT2 On
+	// Switch OUT2 on
 	OC01.write(OUT2, HIGH);
 	delay(DELAY_TIME);
 	
-	// Switch OUT3 On
+	// Switch OUT3 on
 	OC01.write(OUT3, HIGH);
 	delay(DELAY_TIME);
 	
@@ -71,7 +71,7 @@ void loop() {
 	OC01.write(OUT1, LOW);
 	delay(DELAY_TIME);
 	
-	// Switch OUT2 odd
+	// Switch OUT2 off
 	OC01.write(OUT2, LOW);
 	delay(DELAY_TIME);
 	
