@@ -48,10 +48,8 @@ void xOC01::write(byte pin, bool state){
 	if(state == 1){
 		pin_state |= (pin_state | (uint8_t)pin);
 		xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, pin_state);
-		Serial.println(pin_state,DEC);
 	}else if(state == 0){
 		pin_state &= ~(1 << pin_state|pin);
-		Serial.println(pin_state,DEC);
 		xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, pin_state);
 	}
 }
