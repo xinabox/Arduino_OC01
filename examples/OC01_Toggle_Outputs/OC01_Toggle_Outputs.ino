@@ -71,7 +71,7 @@ void loop() {
 	OC01.write(OUT1, LOW);
 	delay(DELAY_TIME);
 	
-	// Switch OUT2 odd
+	// Switch OUT2 off
 	OC01.write(OUT2, LOW);
 	delay(DELAY_TIME);
 	
