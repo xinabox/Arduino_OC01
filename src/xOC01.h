@@ -14,8 +14,6 @@
 #ifndef xOC01_h
 #define xOC01_h
 
-#pragma once
-
 // Include File Headers
 #include "xCore.h"
 
@@ -43,21 +41,43 @@
 #define PCA9536_PIN3_OUTPUT			0x00
 #define PCA9536_PIN3_INTPUT			0x08
 
-#define PCA9536_PIN0 		0x01
-#define PCA9536_PIN1 		0x02
-#define PCA9536_PIN2 		0x04
-#define PCA9536_PIN3 		0x08
+#define PCA9536_PIN0 				0x01
+#define PCA9536_PIN1 				0x02
+#define PCA9536_PIN2 				0x04
+#define PCA9536_PIN3 				0x08
 
 /********************************************************************/
 
 class xOC01: public xCoreClass
 {
 	public:
-		void write(byte pin, bool state);
-		bool begin(void);
+		/**
+		* Constructor
+		* Creates a new instance of Sensor class.
+		*/		
 		xOC01();
 		
+		/*
+		* Runs the setup of the sensor. 
+		* Call this in setup(), before reading any sensor data.
+		*
+		* @return true if setup was successful.
+		*/		
+		bool begin(void);		
+		
+		/*
+		* Used to write to the pin. HIGH or LOW. 
+		* Call this in loop().
+		*
+		* @param pin. OC1 has 4 Pin options to write to.
+		* @param state. State which you would like to write to the output pin.
+		* @return none
+		*/			
+		void write(byte pin, bool state);
+
+		
 	private:
+
 		uint8_t pin_state;
 };
 

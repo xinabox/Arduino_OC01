@@ -16,32 +16,38 @@
 /********************************************************
  	Constructor
 *********************************************************/
-xOC01::xOC01(){
+xOC01::xOC01()
+{
 	pin_state = 0;
 }
 
 /********************************************************
  	Configure OC01
 *********************************************************/
-bool xOC01::begin(void){
+bool xOC01::begin(void)
+{
 	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_CONFIG, PCA9536_CONF_OUTPUT);
 }
 
 /********************************************************
  	Write to PIN
 *********************************************************/
-void xOC01::write(byte pin, bool state){
-	if(pin == 0){
-		pin = PCA9536_PIN0;
-	}else if(pin == 1){
-		pin = PCA9536_PIN1;
-	}else if(pin == 2){
-		pin = PCA9536_PIN2;
-	}else if(pin == 3){
-		pin = PCA9536_PIN3;
-	}else{
-		Serial.println("Invalid Pin Selection");
-		return;
+void xOC01::write(byte pin, bool state)
+{	
+	switch(pin){
+		case 0:
+			pin = PCA9536_PIN0;
+			break;
+		case 1:
+			pin = PCA9536_PIN1;
+			break;
+		case 2:
+			pin = PCA9536_PIN2;
+			break;
+			
+		case 3:
+			pin = PCA9536_PIN3;
+			break;
 	}
 	
 	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT);
