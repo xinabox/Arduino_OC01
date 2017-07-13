@@ -26,8 +26,8 @@ xOC01::xOC01()
 *********************************************************/
 bool xOC01::begin(void)
 {
-	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_CONFIG, PCA9536_CONF_OUTPUT);
 	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, PCA9536_ALL_OUTPUTS_OFF);
+	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_CONFIG, PCA9536_CONF_OUTPUT);
 }
 
 /********************************************************
