@@ -29,6 +29,8 @@
 #define PCA9536_CONF_OUTPUT			0x00
 #define PCA9536_CONF_INPUT			0x0F
 
+#define PCA9536_ALL_OUTPUTS_OFF		0x00
+
 #define PCA9536_PIN0_OUTPUT			0x00
 #define PCA9536_PIN0_INPUT			0x01
 
@@ -75,6 +77,15 @@ class xOC01: public xCoreClass
 		*/			
 		void write(byte pin, bool state);
 
+		/*
+		* Used to determine the status of Output Pins 
+		* Call this in loop().
+		*
+		* @param pin. OC1 has 4 Pin options to write to.
+		* @param state. State which you would like to write to the output pin.
+		* @return status of bytes
+		*/
+		uint8_t getStatus(void);
 		
 	private:
 
