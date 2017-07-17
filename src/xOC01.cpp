@@ -26,12 +26,16 @@ xOC01::xOC01()
 *********************************************************/
 bool xOC01::begin(void)
 {
+<<<<<<< HEAD
 	begin(PCA9536_ALL_OUTPUTS_OFF);
 }
 
 bool xOC01::begin(uint8_t pins)
 {
 	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, pins);
+=======
+	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, PCA9536_ALL_OUTPUTS_OFF);
+>>>>>>> origin/master
 	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_CONFIG, PCA9536_CONF_OUTPUT);
 }
 
@@ -55,7 +59,11 @@ void xOC01::write(uint8_t pin, bool state)
 *********************************************************/
 uint8_t xOC01::getStatus(void)
 {
+<<<<<<< HEAD
 	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT); 
+=======
+	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT);
+>>>>>>> origin/master
 	return pin_state;
 }
 

@@ -18,35 +18,49 @@
 #include "xCore.h"
 
 // PCA9536 Device I2C Address
-#define PCA9536_I2C_ADDRESS			0x41
+#define PCA9536_I2C_ADDRESS					0x41
 
 // PCA9536 Register Definitions
-#define PCA9536_REG_INPUT_PORT		0x00
-#define PCA9536_REG_OUTPUT_PORT		0x01	
-#define PCA9536_REG_POL_INVERSION	0x02
-#define PCA9536_REG_CONFIG			0x03
+#define PCA9536_REG_INPUT_PORT			0x00
+#define PCA9536_REG_OUTPUT_PORT			0x01	
+#define PCA9536_REG_POL_INVERSION		0x02
+#define PCA9536_REG_CONFIG					0x03
 
-#define PCA9536_CONF_OUTPUT			0x00
-#define PCA9536_CONF_INPUT			0x0F
+#define PCA9536_CONF_OUTPUT					0x00
+#define PCA9536_CONF_INPUT					0x0F
 
+<<<<<<< HEAD
 #define PCA9536_ALL_OUTPUTS_OFF		0x00
 
 #define PCA9536_PIN0_OUTPUT			0x00
 #define PCA9536_PIN0_INPUT			0x01
+=======
+#define PCA9536_ALL_OUTPUTS_OFF			0x00
+>>>>>>> origin/master
 
-#define PCA9536_PIN1_OUTPUT			0x00
-#define PCA9536_PIN1_INPUT			0x02
+#define PCA9536_PIN0_OUTPUT					0x00
+#define PCA9536_PIN0_INPUT					0x01
 
-#define PCA9536_PIN2_OUTPUT			0x00
-#define PCA9536_PIN2_INPUT			0x04
+#define PCA9536_PIN1_OUTPUT					0x00
+#define PCA9536_PIN1_INPUT					0x02
 
-#define PCA9536_PIN3_OUTPUT			0x00
-#define PCA9536_PIN3_INTPUT			0x08
+#define PCA9536_PIN2_OUTPUT					0x00
+#define PCA9536_PIN2_INPUT					0x04
 
+<<<<<<< HEAD
 #define OUT0 						0x01
 #define OUT1 						0x02
 #define OUT2 						0x04
 #define OUT3 						0x08
+=======
+#define PCA9536_PIN3_OUTPUT					0x00
+#define PCA9536_PIN3_INTPUT					0x08
+
+#define PCA9536_PIN0 								0x01
+#define PCA9536_PIN1 								0x02
+#define PCA9536_PIN2 								0x04
+#define PCA9536_PIN3 								0x08
+>>>>>>> origin/master
 
 /********************************************************************/
 

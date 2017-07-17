@@ -22,9 +22,12 @@
 	
 *************************************************************/
 
+
+/********************* Library Includes *********************/
 #include <xOC01.h>
 #include <xCore.h>
 
+/********************* SYSTEM VARIABLES *********************/
 const int DELAY_TIME = 500;
 
 // Assign a constant variable to control OC01 outputs
@@ -33,6 +36,7 @@ const int OUT1 = 1;
 const int OUT2 = 2;
 const int OUT3 = 3;
 
+/*********************** Sketch Code ************************/
 void setup() {
 	// Start the Serial Monitor
 	Serial.begin(115200);
