@@ -14,9 +14,14 @@ OC01					KEYWORD1
 
 begin   				KEYWORD2
 write				 	KEYWORD2
+getStatus				KEYWORD2
 
 #######################################
 # Constants 			(LITERAL1)
 #######################################
 
+OUT0					LITERAL1
+OUT1					LITERAL1
+OUT2					LITERAL1
+OUT3					LITERAL1
 

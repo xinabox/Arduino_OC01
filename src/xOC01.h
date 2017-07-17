@@ -29,6 +29,8 @@
 #define PCA9536_CONF_OUTPUT			0x00
 #define PCA9536_CONF_INPUT			0x0F
 
+#define PCA9536_ALL_OUTPUTS_OFF		0x00
+
 #define PCA9536_PIN0_OUTPUT			0x00
 #define PCA9536_PIN0_INPUT			0x01
 
@@ -41,10 +43,10 @@
 #define PCA9536_PIN3_OUTPUT			0x00
 #define PCA9536_PIN3_INTPUT			0x08
 
-#define PCA9536_PIN0 				0x01
-#define PCA9536_PIN1 				0x02
-#define PCA9536_PIN2 				0x04
-#define PCA9536_PIN3 				0x08
+#define OUT0 						0x01
+#define OUT1 						0x02
+#define OUT2 						0x04
+#define OUT3 						0x08
 
 /********************************************************************/
 
@@ -63,18 +65,38 @@ class xOC01: public xCoreClass
 		*
 		* @return true if setup was successful.
 		*/		
-		bool begin(void);		
+		bool begin(void);
+
+		/*
+		* Runs the setup of the sensor. 
+		* Call this in setup(), before reading any sensor data.
+		*
+		* @param pins, allows users to configure specific pins 
+		* to be high on start up.
+		*
+		* @return true if setup was successful.
+		*/	
+		bool begin(uint8_t pins);		
 		
 		/*
 		* Used to write to the pin. HIGH or LOW. 
 		* Call this in loop().
 		*
-		* @param pin. OC1 has 4 Pin options to write to.
+		* @param pin. OC01 has 4 Pin options to write to.
 		* @param state. State which you would like to write to the output pin.
 		* @return none
 		*/			
-		void write(byte pin, bool state);
+		void write(uint8_t pin, bool state);
 
+		/*
+		* Used to determine the status of Output Pins 
+		* Call this in loop().
+		*
+		* @param pin. OC1 has 4 Pin options to write to.
+		* @param state. State which you would like to write to the output pin.
+		* @return status of bytes
+		*/
+		uint8_t getStatus(void);
 		
 	private:
 
