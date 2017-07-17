@@ -36,7 +36,7 @@ void setup() {
 	
 	/* 
 		Start the OC01 port expander
-	   	The input OUT1 will enable the OUT1 output port
+	  The input OUT1 will enable the OUT1 output port
 	*/
 	OC01.begin(OUT1);
 }
