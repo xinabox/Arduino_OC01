@@ -1,5 +1,5 @@
 # ☒CHIP OC01
-<img src="extras/OC01.png" width="300" align="right">
+<img src="extras/OC01 V0.4.11.JPG" width="300" align="right">
 Burn Wire Module.
 
 This module can be purchased on [Xinabox CC](https://xinabox.cc/OC01/).
