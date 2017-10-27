@@ -1,8 +1,8 @@
 # ☒CHIP OC01
-<img src="extras/OC01 V0.4.11.JPG" width="300" align="right">
+<img src="extras/OC01 V0.4.11.JPG" width="35%" height="auto" align="right">
 Burn Wire Module.
 
-This module can be purchased on [Xinabox CC](https://xinabox.cc/OC01/).
+This module can be purchased on [Xinabox CC](https://xinabox.cc/products/OC01/).
 
 ## About the OC01
 This ☒CHIP forms part of the interface modules and is equiped with a high speed IO expander chip allowing user to output a signal to another device or simple use as a control mechanism.
