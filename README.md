@@ -5,13 +5,13 @@ Burn Wire Module.
 This module can be purchased on [Xinabox CC](https://xinabox.cc/products/OC01/).
 
 ## About the OC01
-This ☒CHIP forms part of the interface modules and is equiped with a high speed IO expander chip allowing user to output a signal to another device or simple use as a control mechanism.
+This ☒CHIP forms part of the interface modules and is equipped with a high speed IO expander chip allowing user to output a signal to another device or simple use as a control mechanism.
 
 The OC01 ☒CHIP is housed in an extremely compact 2U×2U chip with three connection ports and four output connection points providing both VCC and ground individually.
 
 Module is based off the PCA9536 Remote 4-Bit I2C and SMBus I/O Expander.
 
-- PCA9536 - It provides general-purpose remote I/O expansion for most microcontrollers. More information on the PCA9536 can be found in the device [datasheet](http://www.ti.com/lit/ds/symlink/pca9536.pdf).
+- PCA9536 - It provides general-purpose remote I/O expansion for most micro-controllers. More information on the PCA9536 can be found in the device [datasheet](http://www.ti.com/lit/ds/symlink/pca9536.pdf).
 
 ## Requirements
   - [☒Core Library](https://github.com/xinabox/xCore)
