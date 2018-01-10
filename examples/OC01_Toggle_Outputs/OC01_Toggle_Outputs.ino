@@ -16,9 +16,8 @@
 	The sensor communicates over the I2C Bus.
 
 	------------------------TIPS--------------------------
-	Change this line ----->Wire.begin(2,14);
-	to this			 ----->Wire.begin();
-	to allow this sensor to communicate with CC01 and CR01
+	Comment out this line ----->Wire.pins(2, 14); for support
+	on other devices
 	
 *************************************************************/
 
@@ -30,19 +29,16 @@
 /********************* SYSTEM VARIABLES *********************/
 const int DELAY_TIME = 500;
 
-// Assign a constant variable to control OC01 outputs
-const int OUT0 = 0;
-const int OUT1 = 1;
-const int OUT2 = 2;
-const int OUT3 = 3;
-
 /*********************** Sketch Code ************************/
 void setup() {
 	// Start the Serial Monitor
 	Serial.begin(115200);
-		
+	
+	// Set the I2C Pins for the CW01
+	Wire.pins(2,14);
+	
 	// Start the I2C Communication
-	Wire.begin(2,14);
+	Wire.begin();
 	
 	// Start the OC01 port expander
 	OC01.begin();
