@@ -11,7 +11,8 @@
 	The sensor communicates over the I2C Bus.
 
 	------------------------TIPS--------------------------
-	Change this line to ----->Wire.begin(2,14); for CW01
+	Comment out this line ----->Wire.pins(2, 14); for support
+	on other devices
 	
 *************************************************************/
 
@@ -31,12 +32,15 @@
 const int DELAY_TIME = 500;
 
 void setup() {
+	// Set the I2C Pins for the CW01
+	Wire.pins(2,14);
+	
 	// Start the I2C Communication
 	Wire.begin();
 	
 	/* 
-		Start the OC01 port expander
-	  The input OUT1 will enable the OUT1 output port
+	* Start the OC01 port expander
+	* The input OUT1 will enable the OUT1 output port
 	*/
 	OC01.begin(OUT1);
 }
