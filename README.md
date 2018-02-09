@@ -16,7 +16,6 @@ Module is based off the PCA9536 Remote 4-Bit I2C and SMBus I/O Expander.
 ## Requirements
   - [☒Core Library](https://github.com/xinabox/xCore)
   - [Arduino IDE 1.8.1](https://www.arduino.cc/en/main/software)
-  - ☒CHIP CWO1, CC01, CR01
   
 ## Installation Guide
 To install the libraries please followed the guide provided on the [Arduino Website](https://www.arduino.cc/en/Guide/Libraries) under "**Importing a .zip Library**".
