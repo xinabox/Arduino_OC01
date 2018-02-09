@@ -10,10 +10,6 @@
 	
 	The sensor communicates over the I2C Bus.
 
-	------------------------TIPS--------------------------
-	Comment out this line ----->Wire.pins(2, 14); for support
-	on other devices
-	
 *************************************************************/
 
 /*
@@ -31,9 +27,14 @@
 
 const int DELAY_TIME = 500;
 
+xOC01 OC01;
+
 void setup() {
-	// Set the I2C Pins for the CW01
-	Wire.pins(2,14);
+	// Set the I2C Pins for CW01
+	#ifdef ESP8266
+	  Wire.pins(2, 14);
+	  Wire.setClockStretchLimit(15000);
+	#endif
 	
 	// Start the I2C Communication
 	Wire.begin();
