@@ -17,6 +17,7 @@
 *********************************************************/
 xOC01::xOC01()
 {
+	PCA9536_I2C_ADDRESS = 0x41;
 	pin_state = 0;
 }
 
@@ -57,8 +58,6 @@ uint8_t xOC01::getStatus(void)
 	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT); 
 	return pin_state;
 }
-
-xOC01 OC01 = xOC01();
 
 
 
