@@ -3,23 +3,23 @@
 #######################################
 
 #######################################
-# Instance				(KEYWORD1)
+# Instance	(KEYWORD1)
 #######################################
 
 #######################################
-# Methods and Functions (KEYWORD2)
+# Methods and Functions	(KEYWORD2)
 #######################################
 
-begin   				KEYWORD2
-write				 	KEYWORD2
-getStatus				KEYWORD2
+begin	KEYWORD2
+write	KEYWORD2
+getStatus	KEYWORD2
 
 #######################################
-# Constants 			(LITERAL1)
+# Constants	(LITERAL1)
 #######################################
 
-OUT0					LITERAL1
-OUT1					LITERAL1
-OUT2					LITERAL1
-OUT3					LITERAL1
+OUT0	LITERAL1
+OUT1	LITERAL1
+OUT2	LITERAL1
+OUT3	LITERAL1
 
