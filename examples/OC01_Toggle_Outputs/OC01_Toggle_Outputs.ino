@@ -3,23 +3,18 @@
 	Burn Wire Module
 	
 	You can buy one on our store!
-	-----> https://xinabox.cc/OC01/
+	-----> https://xinabox.cc/products/OC01/
 	
 	This example in structs the OC01 to turn its output port
 	on and off
-	
-	Currently Supported on the following ☒CHIP:
-	- CW01
-	- CC01
-	- CR01
 	
 	The sensor communicates over the I2C Bus.
 	
 *************************************************************/
 
 /********************* Library Includes *********************/
-#include <xOC01.h>
-#include <xCore.h>
+#include <Arduino_OC01.h> // https://github.com/xinabox/Arduino_OC04
+#include <xCore.h> 
 
 const int DELAY_TIME = 500;
 
@@ -47,34 +42,34 @@ void setup() {
 
 void loop() {
 	// Switch OUT0 On
-	OC01.write(OUT0, HIGH);
+	OC01.digitalWrite(OUT0, HIGH);
 	delay(DELAY_TIME);
 	
 	// Switch OUT1 On
-	OC01.write(OUT1, HIGH);
+	OC01.digitalWrite(OUT1, HIGH);
 	delay(DELAY_TIME);
 	
 	// Switch OUT2 On
-	OC01.write(OUT2, HIGH);
+	OC01.digitalWrite(OUT2, HIGH);
 	delay(DELAY_TIME);
 	
 	// Switch OUT3 On
-	OC01.write(OUT3, HIGH);
+	OC01.digitalWrite(OUT3, HIGH);
 	delay(DELAY_TIME);
 	
 	// Switch OUT0 off
-	OC01.write(OUT0, LOW);
+	OC01.digitalWrite(OUT0, LOW);
 	delay(DELAY_TIME);
 	
 	// Switch OUT1 off
-	OC01.write(OUT1, LOW);
+	OC01.digitalWrite(OUT1, LOW);
 	delay(DELAY_TIME);
 	
 	// Switch OUT2 off
-	OC01.write(OUT2, LOW);
+	OC01.digitalWrite(OUT2, LOW);
 	delay(DELAY_TIME);
 	
 	// Switch OUT3 off
-	OC01.write(OUT3, LOW);
+	OC01.digitalWrite(OUT3, LOW);
 	delay(DELAY_TIME);
 }

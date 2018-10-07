@@ -10,7 +10,7 @@
 	PCA9536 - http://www.ti.com/lit/ds/symlink/pca9536.pdf
 */
 
-#include <xOC01.h>
+#include <Arduino_OC01.h>
 
 /********************************************************
  	Constructor
@@ -38,7 +38,7 @@ bool xOC01::begin(uint8_t pins)
 /********************************************************
  	Write to PIN
 *********************************************************/
-void xOC01::write(uint8_t pin, bool state)
+void xOC01::digitalWrite(uint8_t pin, bool state)
 {	
 	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT);
 	if(state == true){

@@ -10,8 +10,8 @@
 	PCA9536 - http://www.ti.com/lit/ds/symlink/pca9536.pdf
 */
 
-#ifndef xOC01_h
-#define xOC01_h
+#ifndef Arduino_OC01_h
+#define Arduino_OC01_h
 
 // Include File Headers
 #include "xCore.h"
@@ -82,7 +82,7 @@ class xOC01: public xCoreClass
 		* @param state. State which you would like to write to the output pin.
 		* @return none
 		*/			
-		void write(uint8_t pin, bool state);
+		void digitalWrite(uint8_t pin, bool state);
 
 		/*
 		* Used to determine the status of Output Pins 

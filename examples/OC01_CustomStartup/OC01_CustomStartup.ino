@@ -3,7 +3,7 @@
 	Burn Wire Module
 	
 	You can buy one on our store!
-	-----> https://xinabox.cc/OC01/
+	-----> https://xinabox.cc/products/OC01/
 	
 	This example instructs the OC01 start with with
 	specified output ports active.
@@ -22,7 +22,7 @@
 	- OUT3
 */
 
-#include <xOC01.h>
+#include <Arduino_OC01.h> // https://github.com/xinabox/Arduino_OC01
 #include <xCore.h>
 
 const int DELAY_TIME = 500;
