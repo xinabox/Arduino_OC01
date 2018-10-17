@@ -10,8 +10,8 @@
 	PCA9536 - http://www.ti.com/lit/ds/symlink/pca9536.pdf
 */
 
-#ifndef arduino-OC01_h
-#define arduino-OC01_h
+#ifndef xOC01_h
+#define xOC01_h
 
 // Include File Headers
 #include "xCore.h"

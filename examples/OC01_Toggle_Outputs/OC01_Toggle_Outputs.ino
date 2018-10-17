@@ -13,7 +13,7 @@
 *************************************************************/
 
 /********************* Library Includes *********************/
-#include <arduino-OC01.h>
+#include <xOC01.h>
 #include <xCore.h> 
 
 const int DELAY_TIME = 500;

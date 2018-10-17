@@ -10,7 +10,7 @@
 	PCA9536 - http://www.ti.com/lit/ds/symlink/pca9536.pdf
 */
 
-#include <arduino-OC01.h>
+#include <xOC01.h>
 
 /********************************************************
  	Constructor

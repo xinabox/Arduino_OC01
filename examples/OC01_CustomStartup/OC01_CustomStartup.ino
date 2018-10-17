@@ -22,7 +22,7 @@
 	- OUT3
 */
 
-#include <arduino-OC01.h> // https://github.com/xinabox/Arduino_OC01
+#include <xOC01.h> // https://github.com/xinabox/arduino-OC01
 #include <xCore.h>
 
 const int DELAY_TIME = 500;
