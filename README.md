@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xinabox/arduino-OC01.svg?branch=master)](https://travis-ci.org/xinabox/arduino-OC01)
+
 # ☒CHIP OC01
 <img src="extras/OC01 V0.4.11.JPG" width="35%" height="auto" align="right">
 Burn Wire Module.
