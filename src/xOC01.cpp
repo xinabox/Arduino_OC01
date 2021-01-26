@@ -1,11 +1,11 @@
 /*
-	This is a library for the OC01 
+	This is a library for the OC01
 	BURN WIRE
 
 	The board uses I2C for communication.
 	The board communicates with the following I2C device:
 	* 	PCA9536
-	
+
 	Data Sheets:
 	PCA9536 - http://www.ti.com/lit/ds/symlink/pca9536.pdf
 */
@@ -31,15 +31,16 @@ bool xOC01::begin(void)
 
 bool xOC01::begin(uint8_t pins)
 {
-	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, pins);
-	xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_CONFIG, PCA9536_CONF_OUTPUT);
+	//xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, pins);
+	xCore.write8(PCA9536_I2C_ADDRESS, 0x03, 0xF8);
+	//xCore.write8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT, pins);
 }
 
 /********************************************************
  	Write to PIN
 *********************************************************/
 void xOC01::digitalWrite(uint8_t pin, bool state)
-{	
+{
 	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT);
 	if(state == true){
 		pin_state |= (pin_state | (uint8_t)pin);
@@ -55,8 +56,13 @@ void xOC01::digitalWrite(uint8_t pin, bool state)
 *********************************************************/
 uint8_t xOC01::getStatus(void)
 {
-	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT); 
+	pin_state = xCore.read8(PCA9536_I2C_ADDRESS, PCA9536_REG_OUTPUT_PORT);
 	return pin_state;
+}
+
+bool xOC01::digitalRead()
+{
+	return xCore.read8(PCA9536_I2C_ADDRESS, 0x00) & 0x08;
 }
 
 
